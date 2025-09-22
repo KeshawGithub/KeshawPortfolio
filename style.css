@@ -5,55 +5,50 @@
     box-sizing: border-box;
 
 }
-html{
-    scroll-behavior: smooth;
-}
 body{
     background-color: black;
     color: white;
-    
+    margin: 0;
+    padding: 0;
 }
-#header {
-    width: 100%;
-    height: 100vh;
-    background-image: url('portfolioIMG/background-Image.png');
-    background-size:auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.container{
-    padding: 10px 20px;
-}
-nav{
+
+/* ---------- NavBar Css ---------------*/
+/* Layout for desktop and larger screens */
+.container {
     display: flex;
-     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-  
+    align-items: center;
+    padding: 0 20px;
 }
-nav .fas{
-    display: none;
+
+.divlogo {
+    flex-shrink: 0;
 }
-.logo{
+
+.logo {
     width: 190px;
 }
-nav ul li {
-    display: inline-block;
+
+nav ul {
+    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
     margin: 10px 20px;
-    
-    
 }
 nav ul li a{
     color:white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
 }
 nav ul li a::after{
         content: '';
         width: 0;
-        height: 3px;
+        height: 5px;
         background: rgb(152, 20, 59);
         position: absolute;
         left: 0;
@@ -64,31 +59,149 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+/* ------MainDiv_Css-------------*/
+
+.main_Div {
+    margin-top: 80px;;
+  display: flex;
+  width: 100%;
+  height:70vh;
+  
+}
+
+.main_left,
+.main_right {
+  flex: 1;             /* divide equally */
+  padding: 20px;       /* optional: spacing inside each */
+  box-sizing: border-box;
+}
 .header-text{
+    display:inline-block;
     margin-top: 10%;
     font-size:30px;
-    padding-left: 250px;
+    padding-left: 100px;
 }
 .header-text h1{
     margin-top: 20px;
-    font-size:60px;
-    display: inline-block;
-    
-    
+    font-size:50px;
+    display: inline-block;    
 }
-.header-text h1 .textFrom{
-    margin-top: 10px; /* Positive margin for better spacing */
-    display: block; /* Ensures it's on a new line */
-    font-size: 30px; /* Adjusted size for readability */
-    
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: typing 10s steps(25, end) infinite, blink 0.75s step-end infinite;
+  font-size: 2rem;
+  color: white;
 }
+
+.textName {
+  font-weight: bold;
+  color: #ff2e63; /* optional accent color */
+}
+
+@keyframes typing {
+   0%   { width: 0; }
+  50%  { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 .header-text h1 .textName{
     color:rgb(190, 27, 76);
    
 }
+.header-text p b{
+    color:rgb(190, 27, 76);
+}
+.gifImG{
+    display: flex;
+    width:300px;
+    height:400px;
+    margin-top: 45px;
+    
+}
+.about{
+    margin-top: 20px;;
+    padding-left: 100px;  
+}
+.aboutPara{
+    font-size:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* -----buttonCSS---------- */
+.buttons{
+    margin-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+   padding-left: 100px;
+    
+}
+.btn5{
+    padding: 8px 15px;
+    margin: 5px;
+    font-size:18px;
+    font-weight:bold;
+    width:150px;
+    height:40px;
+    background: white;
+    border: 2px solid rgb(190, 27, 76);;
+    color:rgb(190, 27, 76);;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px rga(0, 0, 0, .5);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s all ease;
+    text-decoration: none;
+}
+.btn5::before{
+    content:'';
+    width: 50%;
+    height: 100%;
+    background: rgb(190, 27, 76);;
+    position: absolute;
+    top:0 ;
+    left:0;
+    z-index:-1;
+    transform: translateX(-100%);
+    transition: 1s all ease;
+}
+.btn5:hover::before{
+    transform: translateX(0%) rotate(180deg);
+    
+}
+.btn5::after{
+    content:'';
+    width: 50%;
+    height: 100%;
+    background: rgb(190, 27, 76);;
+    position: absolute;
+    top: 0;
+    left:50%;
+    z-index:-1;
+    transform: translateX(100%);
+    transition: 1s all ease;
+}
+.btn5:hover::after{
+    transform: translateX(0%) rotate(180deg);
+    
+}
+.btn5:hover{
+    color:white;
+    background-color: white;
+    border-color: white;
+}
 
+/*-----about CSS-----------*/
+   
 
-/*------- For About section ----------*/
 #about{
     padding: 80px 0;
     color:white;
@@ -102,7 +215,7 @@ nav ul li a:hover::after{
 }
 .about-col-1{
     flex-basis: 35%;
-} 
+}
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
@@ -182,14 +295,15 @@ b {
 /*------- For Services section ----------*/
 #services {
     padding: 30px 0;
+     min-height: 100vh;
 }
 
 .services-list {
     display: flex;
     justify-content: center;
     gap: 50px; /* Adds consistent spacing between the cards */
-    flex-wrap: wrap; /* Ensures proper alignment on smaller screens */
     margin: 40px 0; /* Adds vertical spacing */
+    flex-wrap: wrap; /* allows wrapping if space is small */
 }
 
 .services-list div {
@@ -198,16 +312,16 @@ b {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.4s, background-color 0.4s, color 0.4s;
+    transition: all 0.4s ease; /* simpler: animates transform + shadow + bg */
+    position: relative;        /* makes transform more reliable */
 }
 #services .container {
     margin: 0 auto; /* Centers the container on the page */
     padding: 20px; /* Adds some padding for smaller screens */
 }
 .services-list div:hover {
-    transform: translateY(-20px);
     box-shadow: 0 10px 20px rgba(255, 253, 253, 0.647); /* Adjust shadow for better contrast */
-    background-color: rgb(243, 25, 90); /* More vibrant color for hover */
+    background-image: linear-gradient(to right top, #505250, #797b79, #595b59);
     color: #fff; /* Ensures all text inside turns white */
 }
 
@@ -237,7 +351,7 @@ b {
     bottom: -2px; /* Adjust to position underline */
     width: 0;
     height: 2px; /* Matches desired thickness */
-    background-color: #4204fc;
+    background-color: #f6f8f7;
     transition: width 0.3s ease;
 }
 
@@ -251,7 +365,9 @@ b {
     color: white;
     text-align: center;
     margin-bottom: 80px;
+   
 }
+
 .services-list i {
     font-size: 40px;
     color: #4CAF50;
@@ -274,7 +390,7 @@ b {
 .services-list a:hover {
     color: #fff; /* Matches the hover effect */
 }
-/*------- For portfolio section ----------*/
+/*------- For Project section ----------*/
 .work {
     border-radius: 10px;
     position: relative;
@@ -290,7 +406,6 @@ b {
     max-width: 100%; /* Prevents text from overflowing horizontally */
     word-wrap: break-word; /* Ensures long text breaks properly */
 }
-
 
 .profile-container h3 {
     font-size: 24px;
@@ -402,6 +517,17 @@ b {
 }
 
 /*------- For Contact section ----------*/
+
+.contact-container {
+  
+  padding: 50px; /* Adjust as needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -437,25 +563,6 @@ b {
     color: rgb(200, 20, 75);
     transform: translateY(-7px);
 }
-.contact-container .btn{
-    display: flex; /* Enables Flexbox */
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    margin: 50px 10px; /* Centers the button itself */
-    width: fit-content;
-    height: 40px;
-    border: 2px solid rgb(243, 25, 90);
-    padding: 0 10px; /* Adjusted padding to maintain consistent dimensions */
-    
-    text-decoration: none;
-    color: #fff;
-    background: rgb(200, 20, 75);
-    font-size: 16px; /* Adjust font size */
-    font-weight: 600; /* Makes the text slightly bold */
-    text-align: center; /* Ensures text alignment */
-     
-    cursor: pointer; /* Indicates the button is clickable */
-}
 .contact-right form{
     width: 100%;
 }
@@ -470,13 +577,103 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-.contact-container .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-}
 .contact-container .row{
     padding-left: 200px;
+}
+.buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 35px;;
+}
+.button {
+    position: relative;
+    height: 40px;
+    width: 200px;
+    background: #ff0f80;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 5px #343a40;
+    box-shadow: 0 0 1em 0.1em #ccadc7;
+    text-decoration: none;
+    text-align: center;
+    
+}
+ .button:active {
+    transform: scale(0.96);
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.button.bubbleanimation::before {
+    top: -70%;
+    background-image: radial-gradient(circle, #ff0f80 20%, transparent 20%),
+        radial-gradient(circle, transparent 15%, #ff0f80 15%, transparent 25%),
+        radial-gradient(circle, #ff0f80 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #ff0f80 15%, transparent 20%),
+        radial-gradient(circle, #ff0f80 10%, transparent 20%),
+        radial-gradient(circle, #ff0f80 15%, transparent 25%),
+        radial-gradient(circle, transparent 15%, #ff0f80 20%, transparent 25%),
+        radial-gradient(circle, #ff0f80 20%, transparent 15%),
+        radial-gradient(circle, transparent 15%, #ff0f80 15%, transparent 22%),
+        radial-gradient(circle, #ff0f80 10%, transparent 10%);
+    background-size: 10% 10%, 20% 20%, 15% 20%, 15% 15%, 25% 25%, 10% 15%, 20% 25%, 18% 18%, 15% 15%, 20% 20%;
+    background-position: 8% 90%, 10% 90%, 10% 90%, 20% 80%, 45% 80%, 25% 90%, 30% 80%, 40% 90%, 35% 85%, 50% 90%;
+    animation: topbubbles 1s linear forwards;
+}
+
+@keyframes topbubbles {
+    50% {
+        background-position: 2% 70%, 0% 20%, 10% 50%, 20% 0%, 20% 20%, 20% 40%, 50% 20%, 30% 20%, 60% 30%, 40% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 0% 10%, 10% 30%, 20% -10%, 10% 5%, 20% 20%, 40% 10%, 30% 10%, 60% 15%, 40% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.button.bubbleanimation::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #ff0f80 20%, transparent 20%),
+        radial-gradient(circle, transparent 15%, #ff0f80 15%, transparent 25%),
+        radial-gradient(circle, #ff0f80 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #ff0f80 15%, transparent 20%),
+        radial-gradient(circle, #ff0f80 10%, transparent 20%),
+        radial-gradient(circle, #ff0f80 15%, transparent 25%),
+        radial-gradient(circle, transparent 15%, #ff0f80 20%, transparent 25%),
+        radial-gradient(circle, #ff0f80 20%, transparent 15%),
+        radial-gradient(circle, transparent 15%, #ff0f80 15%, transparent 22%),
+        radial-gradient(circle, #ff0f80 10%, transparent 10%);
+    background-size: 10% 10%, 20% 20%, 15% 20%, 15% 15%, 25% 25%, 10% 15%, 20% 25%, 18% 18%, 15% 15%, 20% 20%;
+    background-position: 90% 0%, 30% 10%, 45% 15%, 50% 5%, 65% 0%, 70% 0%, 75% 0%, 85% 10%, 80% 15%, 60% 10%;
+    animation: bottombubbles 1s linear forwards;
+}
+
+@keyframes bottombubbles {
+    50% {
+        background-position: 80% 70%, 20% 75%, 45% 50%, 60% 60%, 65% 55%, 70% 70%, 80% 75%, 90% 60%, 80% 50%, 60% 80%;
+    }
+
+    100% {
+        background-position: 80% 85%, 20% 90%, 50% 50%, 60% 90%, 50% 95%, 70% 70%, 90% 100%, 90% 80%, 80% 70%, 70% 85%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }
 .copyright{
     width: 100%;
@@ -489,361 +686,287 @@ form input, form textarea{
 .copyright i{
     color: yellow;
 }
-/* Responsive CSS for Tablets max-width: 1324px*/
-@media only screen and (max-width: 1324px) {
-    .header-text {
-        margin-top: 50%;
-        padding-left: 120px;
-        font-size: 35px;
-    }
-    .header-text h1 {
-        font-size: 55px;
-    }
-   
-    nav ul li {
-        margin: 10px 10px;
-    }
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-        font-size: 25px;
-        margin-top: 80px;
-    }
-    .tab-link {
-        font-size: 35px;
-    }
-    .row {
-        padding: 0 40px;
-    }
-    .services-list {
-        gap: 30px;
-    }
-    .work-list {
-        gap: 30px;
-    }
-    .work {
-        width: 300px;
-        height: 250px;
-    }
-    .tab-titles {
-        flex-wrap: wrap;
-    }
-    .tab-link {
-        margin-right: 20px;
-    }
-    .contact-container .row {
+
+
+
+
+
+
+
+
+/* Responsive CSS for Mobile Phones min-width: 600px */
+@media only screen and (min-width: 426px) and (max-width: 1023px) {
+    .main_left {
+    position: relative;
+    background: url("portfolioIMG/original.gif") no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensures text is visible */
+    z-index: 1;
+  }
+
+  /* Optional: Add overlay for better readability */
+  .main_left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: -1;
+  }
+
+  /* Hide the gif div since it's now used as background */
+  .gifImG {
+    display: none;
+  }
+  nav ul li a{
+font-size: 20px;
+}
+}
+
+/* Responsive CSS for Mobile Phones max-width: 426px */
+@media only screen and (max-width: 426px) {
+
+  /* ---------- NavBar Css ---------------*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    width: 300px;
+  }
+
+  nav {
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+    
+  }
+
+  #sidemenu {
+    display: flex;
+    background-color: rgb(48, 44, 44);
+    align-items: center;
+
+  }
+
+  nav ul li a {
+    font-size: 15px;
+
+  }
+
+  nav ul li a::after {
+    height: 2px;
+    background: rgb(244, 241, 242);
+  }
+
+  /* ------MainDiv_Css-------------*/
+  .main_Div {
+    margin-top:50px;
+    flex-direction: column;
+    /* Stack instead of row */
+    height: auto;
+    /* Allow height to adjust naturally */
+    
+  }
+
+  .main_left,
+  .main_right {
+    flex: none;
+    /* Remove equal split */
+    width: 100%;
+    /* Full width each */
+    padding: 8px;
+    /* Reduce padding for mobile */
+  }
+
+  .header-text {
+    padding-left: 8px;
+    /* Reduce left padding */
+    font-size: 30px;
+    /* Adjust font size */
+    margin-top: 5%;
+  }
+
+  .header-text h1 {
+    font-size: 25px;
+    /* Smaller heading */
+  }
+
+  .about {
+    padding-left: 20px;
+  }
+  .aboutPara{
+    font-size:18px;
+  }
+  .buttons {
+    justify-content: center;
+    /* Center buttons on mobile */
+    padding-left: 0;
+  }
+
+  .gifImG {
+        margin: -34px;
         padding-left: 100px;
-    }
-    nav .fas {
-        display: none;
-    }
-}
+        width: 396px;
+        height: 230px;
+  }
 
-/* Responsive CSS for Mobile Phones max-width: 768px */
-@media only screen and (max-width: 768px) {
+  /*-----about CSS-----------*/
+  .row {
+    flex-direction: column;       /* stack items */
+    padding: 0 15px;              /* reduce padding */
+  }
+
+  .about-col-1 {
+    flex-basis: 100%;             /* take full width */
+    display: flex;
+    justify-content: center;      /* center image horizontally */
+    margin-bottom: 15px;          /* spacing below image */
+  }
+
+  .about-col-1 img {
+    max-width: 350px;             /* prevent too large image */
+  }
+
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .sub-title-about {
+    font-size: 50px;              /* shrink heading */
+  }
+  /*------- For Services section ----------*/
+    .services-list {
+    flex-direction: column;    /* stack items vertically */
+    align-items: center;       /* center each card */
+    gap: 20px;                 /* reduce spacing */
+    margin: 20px 0;
+  }
+
+  .services-list div {
+    width: 90%;                /* take most of screen width */
+    max-width: 320px; 
+    height:350px;
+
+  display: flex;                 /* enable flexbox */
+  flex-direction: column;        /* stack icon, heading, text, link */
+  justify-content: center;       /* center vertically */
+  align-items: center;           /* center horizontally */
+  text-align: center; 
    
-    #header {
-        background-image: url('portfolioIMG/background-ImagePhone.png');
-        background-size: cover;
-        background-position: center;
-    }
+  }
 
-    .header-text {
-        margin-top: 29%;
-        padding-left: 60px;
-        font-size: 30px;
-    }
-    .header-text h1 {
-        font-size: 45px;
-        margin-top: 30px;
-    }
-    .tab-link{
-        font-size: 35px;
-    }
-    nav .fas {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-    }
+  .sub-title-services {
+    font-size: 55px;           /* smaller heading */
+    margin-bottom: 30px;
+  }
 
-    nav ul {
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 999;
-        transition: right 0.3s ease-in-out; /* Smooth menu animation */
-    }
+  .services-list i {
+    font-size: 50px;           /* shrink icons */
+  }
 
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
+  .services-list h2 {
+    font-size: 30px;
+  }
 
-    nav ul .fas {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
+  .services-list p {
+    font-size: 20px;
+  }
 
-    nav ul.active {
-        right: 0; /* Display menu when active */
-    }
+/*------- For Project section ----------*/
+.work {
+  width: 350px; 
+  height: 350px;
 
-    #about{
-        padding: 0;
-        
-    }
-    .row {
-        flex-direction: column;
-        padding: 0 10px;
-        margin-top:0;
-    }
-
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-        
-    }
-    .about-col-2{
-        font-size: 25px;
-    }
-    .services-list div{
-        width: 590px;
-        height: 500px;
-       padding-top: 50px;
-    }
-    .services-list i{
-        font-size: 70px;
-    }
-    .services-list a{
-        font-size: 40px;
-    }
-    .services-list h2{
-        font-size: 50px;
-    }
-    .services-list p{
-        font-size: 30px;
-    }
-    .services-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-    }
-
-    .work-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .work {
-        
-        width: 590px;
-        height: 500px; /* Maintain aspect ratio */
-    }
-
-    form input,
-    form textarea {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .contact-container .row {
-        padding-left: 20px;
-        align-items: center;
-    }
-
-    .copyright {
-        font-size: 14px;
-        text-align: center;
-    }
-    nav .fas{
-        padding-left: 100px;
-    }
-}  
-/* Responsive CSS for Mobile Phones max-width: 412px */
-@media only screen and (max-width: 412px) {
-   
-    #header {
-        background-image: url('portfolioIMG/background-ImagePhone.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .header-text {
-        margin-top: 34%;
-        padding-left: 8px;
-        font-size: 30px;
-    }
-    .header-text h1 {
-        font-size: 25px;
-        margin-top: 15px;
-    }
-    .tab-link{
-        font-size: 20px;
-    }
-    nav .fas {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        
-    }
-    nav .fas.fa-times{
-        margin-left: 30px;
-    }
-
-    nav ul {
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 999;
-        transition: right 0.3s ease-in-out; /* Smooth menu animation */
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .fas {
-        position: absolute;
-        top: 25px;
-        left: 25px; 
-        cursor: pointer;
-    }
-
-    nav ul.active {
-        right: 0; /* Display menu when active */
-    }
-    #about{
-        padding: 0;
-        
-    }
-    .row {
-        flex-direction: column;
-        padding: 0 10px;
-        margin-top:0;
-    }
-
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-        
-    }
-    .about-col-2{
-        font-size: 17px;
-    }
-    .services-list div{
-        width: 300px;
-    }
-    .services-list i{
-        font-size: 50px;
-    }
-    .services-list a{
-        font-size: 20px;
-    }
-    .services-list h2{
-        font-size: 30px;
-    }
-    .services-list p{
-        font-size: 20px;
-    }
-    .services-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-    }
-
-    .work-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .work {
-        
-        width: 300px;
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    form input,
-    form textarea {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .contact-container .row {
-        padding-left: 20px;
-        align-items: center;
-    }
-
-    .copyright {
-        font-size: 14px;
-        text-align: center;
-    }
+}
+/*------- For Contact section ----------*/
+.contact-container{
+  padding: 10px;;
+  flex-direction: column;
+}
+.contact-container .row{
+    padding-left: 20px;
+}
+.contact-right{
+    margin: 50px 0px;
+}
 }
 
-/* Responsive CSS for Mobile Phones max-width: 430px */
-@media only screen and (max-width: 431px) {
-    .header-text {
-        margin-top: 34%;
-        padding-left: 35px;
-        font-size: 30px;
-    }
-    .header-text h1 {
-        font-size: 25px;
-        margin-top: 55px;
-    }
-    #about{
-        padding: 0;
-        
-    }
-    .row{
-        margin-top:0;
-    }
-    .services-list div{
-        width: 320px;
-        height:fit-content;
-    }
-    .services-list i{
-        font-size: 70px;
-    }
-    .services-list a{
-        font-size: 25px;
-    }
-    .services-list h2{
-        font-size: 35px;
-    }
-    .services-list p{
-        font-size: 22px;
-    }
-    .services-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-    }
 
-    .work-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
 
-    .work {
-        
-        width: 320px;
-        height: auto; /* Maintain aspect ratio */
-    }
+/* Responsive CSS for Mobile Phones max-width: 1025px */
+@media only screen and (max-width: 1025px) {
+.gifImG{
+  flex-direction: column;
 }
+.contact-container .row {
+    padding-left: 20px; 
+}
+}
+
+
+/* Responsive CSS for Mobile Phones max-width: 787px */
+@media only screen and (max-width: 787px) {
+
+.main_Div {
+   flex-direction: column;
+   height:70vh;
+}
+.main_right {
+padding: 0;
+}
+.header-text {
+  padding-left: 30px;
+}
+.about{
+  padding-left: 40px;
+}
+
+#about{
+padding: 0;
+}
+
+  /*-----about CSS-----------*/
+  .row {
+    flex-direction: column;       /* stack items */
+    padding: 0 15px;              /* reduce padding */
+  }
+    .about-col-1 {
+    flex-basis: 100%;             /* take full width */
+    display: flex;
+    justify-content: center;      /* center image horizontally */
+    margin-bottom: 15px;          /* spacing below image */
+  }
+  .about-col-1 img{
+    width: 400px;
+    height: 400px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

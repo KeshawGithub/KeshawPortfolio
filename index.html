@@ -1,140 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeshawPortfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/bfe20c23e0.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!-- For background  and Home section -->
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="portfolioIMG\LOGOkeshaw.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#profilio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
+
+
+    <!-- For NavBar Html -->
+    <div class="container">
+        <div class="divlogo">
+            <img src="portfolioIMG/LOGOkeshaw.png" class="logo">
+        </div>
+       <div class="navdiv">
+         <nav>
+            <ul id="sidemenu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#profilio">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+       </div>
+    </div>
+
+
+    <!-- For home Html -->
+    <div class="main_Div" id="Home">
+        <div class="main_left">
             <div class="header-text">
                 <p><i>Full Stack <b>Java</b> Developer</i></p>
-                <h1>Hi, I'm <span class="textName">Keshaw</span><br><span class="textFrom">From India</span></h1>
+                <h1 class="typewriter">Hi, I'm <span class="textName">Keshaw Ranjan .</span></h1>
+                <p>From India</p>
+            </div>
+            <div class="about">
+                <P class="aboutPara">I'm a dedicated Full Stack Java Development with a passion for developing scalable
+                    and high-performance web applications.
+                </P>
+            </div>
+            <div class="buttons">
+                <a href="https://github.com/KeshawGithub?tab=repositories" class="btn5" target="_blank"><i
+                        class="fa-brands fa-github"></i> Project</a>
+                <a href="KeshawCV.pdf" class="btn5" download><i class="fa-solid fa-cloud-arrow-down"></i> Resume</a>
+            </div>
+        </div>
+
+
+        <div class="main_right">
+            <div class="gifImG">
+                <img src="portfolioIMG\original.gif" alt="imggif">
             </div>
         </div>
     </div>
- <!-- For About section  -->
- <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="portfolioIMG\profileImg.png">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title-about">About me</h1>
-                <p>I'm a dedicated Full Stack Java Development with a passion for developing scalable and high-performance web applications. 
-                    With extensive experience in various programming languages, farmeWork Hibernate, Spring-Boot, ReactJS and cloud technologies, 
-                    I excel at creating robust solutions and optimizing complex systems. 
-                    As a mentor and code reviewer, I also enjoy helping other developers enhance their skills and achieve their goals.
-                </p>
-                <div class="tab-titles">
-                    <p class="tab-link active-link" onclick="opentab('skill')">Skill</p>
-                    <p class="tab-link" onclick="opentab('project')">Project</p>
-                    <p class="tab-link" onclick="opentab('education')">Education</p>
-                </div>
-                <!-- Skills Section -->
-                <div class="tab-contents active-tab" id="skill">
-                    
-                    <ul class="skills-list">
-                        <li><b>Programming Languages:</b><br>C, Java, JavaScript</li>
-                        <li><b>Frontend Development:</b><br> HTML, CSS, JavaScript, Bootstrap</li>
-                        <li><b>Backend Development:</b><br> Servlet, JSP, Hibernate, Spring, Spring Boot</li>
-                        <li><b>Database Management:</b> <br>SQL, NoSQL</li>
-                        <!-- <li><b>Cloud Computing:</b><br>Microsoft Azure, Google Cloud Platform (GCP)</li> -->
-                    </ul>
-                </div>
 
-                <!-- Projects Section -->
-                <div class="tab-contents" id="project">
-                    
-                    <ul class="project-list">
-                        <li>
-                            <b>Car Rental System</b>
-                            <br>
-                            <b class="list-Point">Tools Used:</b> NetBeans IDE, Java Swing, Oracle Database
-                            <br>
-                            <b class="list-Point">Description:</b> A desktop application for managing car rentals with a Java Swing-based UI and Oracle Database for backend operations. It supports inventory tracking, booking management, and invoicing.
-                        </li>
-                        <li>
-                            <b>Hospital Management System</b>
-                            <br>
-                            <b class="list-Point">Tools Used:</b> Eclipse IDE, Servlet, JDBC, JSP, Oracle Database
-                            <br>
-                            <b class="list-Point">Description:</b> A web application for managing patient records, appointments, and hospital resources, built using HTML/CSS, Bootstrap, and Java technologies with Oracle Database support.
-                        </li>
-                        <li>
-                            <b>Employee Management System (Work in Progress)</b>
-                            <br>
-                            <b class="list-Point">Tools Used:</b> Eclipse IDE, Hibernate, Spring, Oracle Database
-                            <br>
-                            <b class="list-Point">Description:</b> An application under development for managing employee data, attendance, and performance, with integration of advanced reporting and payroll features.
-                        </li>
-                    </ul>
+    <!-- For About section  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1" data-aos="zoom-in-down" data-aos-duration="2000">
+                    <img src="portfolioIMG\profileImg.png">
                 </div>
+                <div class="about-col-2">
+                    <div data-aos="fade-right" data-aos-duration="3000">
+                        <h1 class="sub-title-about">About me</h1>
+                    </div>
 
-                <!-- Education Section -->
-                <div class="tab-contents" id="education">
-                   
-                    <ul class="education-list">
-                        <li><b>2025:</b><br> MCA (Master of Computer Applications) from Ranchi University (Pursuing)</li>
-                        <li><b>2023:</b><br> BCA (Bachelor of Computer Applications) from Ranchi University</li>
-                        <li><b>2020:</b><br> Intermediate from DAV Public School, Dhurwa</li>
-                        <li><b>2017:</b><br> Matriculation from DAV Public School, Dhurwa</li>
-                    </ul>
+                    <p>I’m a passionate Full Stack Java Developer with a strong foundation in building responsive and
+                        scalable web applications. Skilled in technologies like Java, Spring Boot, Hibernate, and
+                        ReactJS,
+                        I love turning ideas into interactive digital solutions. Eager to contribute to real-world
+                        projects, constantly learning, and growing with every line of code.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-link active-link" onclick="opentab('skill')">Skill</p>
+                        <p class="tab-link" onclick="opentab('project')">Project</p>
+                        <p class="tab-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- Skills Section -->
+                    <div class="tab-contents active-tab" id="skill">
+
+                        <ul class="skills-list">
+                            <li><b>Programming Languages:</b><br>C, Java, JavaScript</li>
+                            <li><b>Frontend Development:</b><br> HTML, CSS, JavaScript, Bootstrap</li>
+                            <li><b>Backend Development:</b><br> Servlet, JSP, Hibernate, Spring, Spring Boot</li>
+                            <li><b>Database Management:</b> <br>SQL, NoSQL</li>
+                            <!-- <li><b>Cloud Computing:</b><br>Microsoft Azure, Google Cloud Platform (GCP)</li> -->
+                        </ul>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="tab-contents" id="project">
+
+                        <ul class="project-list">
+                            <li>
+                                <b>Car Rental System</b>
+                                <br>
+                                <b class="list-Point">Tools Used:</b> NetBeans IDE, Java Swing, Oracle Database
+                                <br>
+                                <b class="list-Point">Description:</b> A desktop application for managing car rentals
+                                with a Java Swing-based UI and Oracle Database for backend operations. It supports
+                                inventory tracking, booking management, and invoicing.
+                            </li>
+                            <li>
+                                <b>Hospital Management System</b>
+                                <br>
+                                <b class="list-Point">Tools Used:</b> Eclipse IDE, Servlet, JDBC, JSP, Oracle Database
+                                <br>
+                                <b class="list-Point">Description:</b> A web application for managing patient records,
+                                appointments, and hospital resources, built using HTML/CSS, Bootstrap, and Java
+                                technologies with Oracle Database support.
+                            </li>
+                            <li>
+                                <b>Employee Management System (Work in Progress)</b>
+                                <br>
+                                <b class="list-Point">Tools Used:</b> Eclipse IDE, Hibernate, Spring, Oracle Database
+                                <br>
+                                <b class="list-Point">Description:</b> An application under development for managing
+                                employee data, attendance, and performance, with integration of advanced reporting and
+                                payroll features.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="tab-contents" id="education">
+
+                        <ul class="education-list">
+                            <li><b>2025:</b><br> MCA (Master of Computer Applications) from Ranchi University (Pursuing)
+                            </li>
+                            <li><b>2023:</b><br> BCA (Bachelor of Computer Applications) from Ranchi University</li>
+                            <li><b>2020:</b><br> Intermediate from DAV Public School, Dhurwa</li>
+                            <li><b>2017:</b><br> Matriculation from DAV Public School, Dhurwa</li>
+                        </ul>
+                    </div>
+
                 </div>
-
             </div>
         </div>
     </div>
- </div>
- <!-- For services section -->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title-services">My Services</h1>
-        <div class="services-list">
+    <!-- For services section -->
+    <div id="services">
+        <div class="containers">
             <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Development</h2>
-                <p>I build fast, responsive, and dynamic websites tailored to your business or personal needs. From static pages to full-stack web apps — I've got you covered.</p>
-                     <a href="#">Learn more</a>
+                <h1 class="sub-title-services ">My Services</h1>
             </div>
-            <div>
-                <i class="fas fa-crop-alt"></i>
-                <h2>UI/UX Design</h2>
-                <p>I design clean, user-friendly interfaces that offer a seamless and engaging experience for your users — turning ideas into intuitive designs.</p>
-                     <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store-ios"></i>
-                <h2>Windows Applications</h2>
-                <p>I develop robust and efficient Windows desktop applications with smooth functionality and clean UI, designed to simplify complex tasks.</p>
-                     <a href="#">Learn more</a>
+
+            <div class="services-list">
+                <div data-aos="zoom-in" data-aos-duration="2000">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I build fast, responsive, and dynamic websites tailored to your business or personal needs. From
+                        static pages to full-stack web apps — I've got you covered.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1500">
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I design clean, user-friendly interfaces that offer a seamless and engaging experience for your
+                        users — turning ideas into intuitive designs.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="2000">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Windows Applications</h2>
+                    <p>I develop robust and efficient Windows desktop applications with smooth functionality and clean
+                        UI, designed to simplify complex tasks.</p>
+                    <a href="#">Learn more</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
- <!-- For profile section -->
+    <!-- For project section -->
 <div id="profilio">
     <div class="profile-container">
-        <h1 class="sub-title-profilio">My Work</h1>
+        <div>
+            <h1 class="sub-title-profilio">My Work</h1>
+        </div>
+        
         <div class="work-list">
-            <div class="work">
+            <div class="work" data-aos="flip-down" data-aos-duration="3000">
                 <img src="portfolioIMG\desktop-app.webp" alt="">
                 <div class="layer">
                     <h3>Car Rental System</h3>
@@ -142,7 +196,7 @@
                     <a href="https://github.com/KeshawGithub/Car-Rental-System" class="fas fa-external-link-alt"></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work" data-aos="flip-down" data-aos-duration="2500">
                 <img src="portfolioIMG\web-application-Image.jpg" alt="">
                 <div class="layer">
                     <h3>Hospital Management System</h3>
@@ -150,7 +204,7 @@
                     <a href="https://github.com/KeshawGithub/Hospital-System" class="fas fa-external-link-alt"></a>
                 </div>
             </div>
-            <div class="work">
+            <div class="work" data-aos="flip-down" data-aos-duration="3000">
                 <img src="portfolioIMG\shoppingImg.png" alt="">
                 <div class="layer">
                     <h3>Online Book shopping web</h3>
@@ -162,11 +216,12 @@
         <a href="https://github.com/KeshawGithub?tab=repositories" class="btn">See more</a>
     </div>
 </div>
- <!-- For contant section -->
+<!-- For contant section -->
   <div id="contact">
+     
     <div class="contact-container">
         <div class="row">
-            <div class="contact-left">
+            <div class="contact-left" data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="1500">
                 <h1 class="contact-sub-title">Contact Me</h1>
                 <!-- Clickable email -->
                 <p>
@@ -184,73 +239,70 @@
                     <a href="https://github.com/KeshawGithub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/keshaw-ranjan/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="KeshawCV.pdf" download class="btn">Download CV</a>
+                <div class="buttons" style =" justify-content:start; padding:0px"> 
+                <a href="KeshawCV.pdf" download class="btn5" style:="">Download CV</a>
+                </div>
             </div>
-            <div class="contact-right">
-                <form name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+            <div class="contact-right" data-aos="fade-down"  data-aos-easing="linear"  data-aos-duration="1500">
+                
+                <form name="contact" method="POST">
                     <input type="hidden" name="form-name" value="contact">
 
                     <input type="text" name="name" placeholder="Your name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <div class="buttonDiv">
+                         <button type="submit" class="button bubbleanimation">Submit</button>
+                    </div>
+                   
                 </form>
             </div>
 
         </div>
     </div>
+   
     <div class="copyright">
         <p>Copyright @ KeshawRanjan <i class="fa-solid fa-face-smile"></i></p>
     </div>
   </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-link");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        } for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- For About section  -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            } for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-  <script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-<script>
-    const handleSubmit = event => {
-    event.preventDefault();
+    </script>
+    <!-- button script-->
+    <script>
+        const buttons = document.querySelectorAll(".button");
 
-    const form = event.target;
-    const formData = new FormData(form);
+        buttons.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                btn.classList.add("bubbleanimation");
 
-    // Add required hidden field Netlify expects
-    formData.append("form-name", form.getAttribute("name"));
-
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-    })
-        .then(() => {
-        alert("Form successfully submitted!");
-        form.reset(); // Optional: Reset the form after submission
-        })
-        .catch(error => {
-        console.error("Form submission error:", error);
-        alert("There was a problem submitting the form.");
+                setTimeout(() => {
+                    btn.classList.remove("bubbleanimation");
+                }, 1000);
+            });
         });
-    };
+    </script>
 
-</script>
 </body>
+
 </html>

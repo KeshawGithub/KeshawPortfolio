@@ -52,8 +52,15 @@ Chrome DevTools
 
 You can add screenshots here:
 
-/assets/images/home.png
-/assets/images/projects.png
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/5ed8c8fd-9757-46ba-a09b-358139453e6e" />
+
+<img width="1900" height="865" alt="image" src="https://github.com/user-attachments/assets/fa17688a-4427-4c53-b7b5-3eb5a223d6b8" />
+<img width="1898" height="870" alt="image" src="https://github.com/user-attachments/assets/ffbcb664-40ed-466f-94ea-72b91a02c20b" />
+<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/5206e629-8de8-407d-b452-f8e833925fc6" />
+<img width="1899" height="866" alt="image" src="https://github.com/user-attachments/assets/b65fd6c3-d349-4b7c-b163-5bb64c2cd0ae" />
+
+
+
 
 🔗 Live Demo
 
@@ -61,23 +68,6 @@ You can add screenshots here:
 
 Example:
 https://github.com/KeshawGithub/KeshawPortfolio
-
-📁 Project Structure
-MyPortfolio/
-│── index.html
-│── about.html
-│── projects.html
-│── contact.html
-│
-├── /css
-│     └── style.css
-│
-├── /js
-│     └── script.js
-│
-└── /assets
-      ├── images/
-      └── icons/
 
 ⭐ Features
 
